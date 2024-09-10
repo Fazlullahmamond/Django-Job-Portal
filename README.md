@@ -48,3 +48,7 @@ To set up the project locally, follow these steps:
 6. **Run the Development Server**
    ```bash
    python manage.py runserver
+
+
+```markdown
+![Screenshot](media/screenshot.png)
