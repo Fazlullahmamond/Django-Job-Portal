@@ -50,5 +50,4 @@ To set up the project locally, follow these steps:
    python manage.py runserver
 
 
-```markdown
 ![Screenshot](media/screenshot.png)
