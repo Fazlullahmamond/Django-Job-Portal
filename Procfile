@@ -1,0 +1,1 @@
+web gunicorn OnlineJobPortalProject.wsgi:application --log-file -

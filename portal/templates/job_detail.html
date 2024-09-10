@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+<article class="media content-section">
+  <div class="media-body">
+    <img class="account-img" src="{{ job.company.logo.url }}">
+    <a style="font-size: 30px;"> شرکت {{ job.company }}</a>
+    <small class="text-muted"><a href="{{ job.company.link }}">(وبسایت)</a></small>
+    <div class="article-metadata mt-2">
+      </div>
+      <h3 class="article-title mt-3">{{ job.title }}</h3  >
+      <hr>
+      ځای:
+      <span class="job-property ml-5">
+        {{ job.location }}
+      </span>
+      دسته بندی : 
+      <span class="job-property" >
+        {{ job.category }}
+      </span><br><br>
+      کاری سابقه:
+      <span class="job-property ml-5" >
+        {{ job.get_experience_display }}
+      </span>
+      حقوق:
+      <span class="job-property ml-5" >
+      {{ job.get_salary_display }}
+      </span>
+       همکاری نوعیت:
+      <span class="job-property" >
+      {{ job.get_cooperation_type_display }}
+    </span>
+    <legend class="mt-5 mb-3" >د کار ځای </legend>
+      <p class="article-content">{{ job.job_description }}</p>
+    <legend class="mt-5 mb-3">کمپنۍ په اړه</legend>
+      <p class="mb-5">{{job.company.co_introduction}}</p>
+    <p>
+    ضروری مهارتونه:
+    </p>
+    <span class="job-property ml-5">
+        {{ job.skills_required }}
+    </span>
+    <br>
+    <br>
+    د وظیفی شرح:
+    <span class="job-property ml-5">
+      {{ job.get_military_service_display }}
+    </span>
+    تحصیلات:
+    <span class="job-property ml-5">
+      {{ job.get_degree_display }}
+    </span>
+    جنسیت:
+    <span class="job-property ">
+      {{ job.get_gender_display }}
+    </span>
+  </div>      
+</article>
+
+{% endblock %}
